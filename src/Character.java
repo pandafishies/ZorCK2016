@@ -16,14 +16,16 @@ public class Character {
     public int speed;
     public int attack;
     public int defense;
+    public String name;
     
     private ArrayList<Item> items;
     
-    public Character(int hp, int speed, int attack, int defense){
+    public Character(int hp, int speed, int attack, int defense, String name){
         this.attack = attack;
         this.defense = defense;
         this.hp = hp;
         this.speed = speed;
+        this.name =  name;
         this.items = new ArrayList<>();
     }
         
