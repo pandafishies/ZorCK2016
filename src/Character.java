@@ -21,6 +21,10 @@ public class Character {
     private ArrayList<Item> items;
     
     public Character(int hp, int speed, int attack, int defense, String name){
+<<<<<<< HEAD
+=======
+        this.name = name;
+>>>>>>> Changed Character class to include a name parameter
         this.attack = attack;
         this.defense = defense;
         this.hp = hp;
