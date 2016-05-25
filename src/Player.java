@@ -30,6 +30,7 @@ public class Player extends Character{
         if(this.level>enemy.LEVEL){
             this.xp += (enemy.LEVEL * enemy.EXP)/5 * Math.pow(2*enemy.LEVEL+10,2.5)/Math.pow(enemy.LEVEL*2+10,2.5)+1;
         }
+
         else{
             this.xp += (enemy.LEVEL * enemy.EXP)/5 * Math.pow(2*enemy.LEVEL+10,2.5)/Math.pow(enemy.LEVEL+this.level+10,2.5)+1;
         }
@@ -86,10 +87,12 @@ public class Player extends Character{
             levelChanged = true;
         }
         // recalculates stats based on new level and new EVs
+
             this.hp = (int) ((((this.HP+this.HPIV)*2 + Math.pow(hpev, .5)/4)*this.level)/100 + this.level +10);
             this.attack = (int) ((((this.ATTACK+this.ATTACKIV)*2 + Math.pow(atkev, .5)/4)*this.level)/100 + 5);
             this.defense = (int) ((((this.DEFENSE+this.DEFENSEIV)*2 + Math.pow(defev, .5)/4)*this.level)/100 + 5);
             this.speed = (int) ((((this.SPEED+this.SPEEDIV)*2 + Math.pow(spdev, .5)/4)*this.level)/100 + 5);
+
     }
     
     public void takeDamage(Enemy enemy){

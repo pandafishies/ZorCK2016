@@ -12,6 +12,7 @@ public class Enemy extends Character{
     public final int EXP;
     public final int LEVEL;
     
+
     //the following variables are values used to represent the number of EVs awarded
     //for the defeat of the enemy
     public final int HPEV;
@@ -29,10 +30,19 @@ public class Enemy extends Character{
         this.attack = (this.attack-5)*LEVEL+5;
         this.defense = (this.defense-5)*LEVEL+5;
         this.speed = (this.speed-5)*LEVEL+5;
+
         
         this.HPEV = hpev;
         this.DEFEV = defev;
         this.ATKEV = atkev;
         this.SPDEV = spdev;
+
+    }
+    
+    public void takeDamage(Player player){
+        // the 40 in this equation will be replaced by the strength of the weapon used to attack.
+        this.hp -= (2 * player.getLevel() +10)/250 * player.attack / this.defense * 40 + 1;
+        if(this.hp<0) this.hp = 0;
+
     }
 }

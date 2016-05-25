@@ -16,7 +16,9 @@ public class Character {
     public int speed;
     public int attack;
     public int defense;
-    public String name;
+
+    public final String name;
+
     
     //the following variables are base stats that are permanent and will be used
     //to determine the characters used stats as the level changes.
@@ -24,6 +26,7 @@ public class Character {
     public final int ATTACK;
     public final int DEFENSE;
     public final int SPEED;
+
     
     //the following variables are permanent values randomly generated upon the creation
     //of a character to allow for stat variation among charaters of the same type.
@@ -36,6 +39,7 @@ public class Character {
     private ArrayList<Item> items;
     
     public Character(int hp, int speed, int attack, int defense, String name){
+
 
         this.ATTACK = attack;
         this.DEFENSE = defense;

@@ -10,7 +10,7 @@ Clone repository so you have main working repository (repo) on your computer.
 _You only do this once!_
 
 ```sh
-git clone https://github.com/aebooth/ZorCK2016.git
+git clone https://github.com/BoofPC/ZorCK2016.git
 ```
 
 ## Step 2
@@ -49,7 +49,7 @@ Your branch is now be merged into `master`, you just need to push so everyone
 can `pull` your changes.
 
 ```sh
-git push
+git push origin master
 ```
 
 Finally, if all that worked, delete your feature branch:
@@ -63,3 +63,9 @@ Your branch will be deleted if properly merged.
 ## Step 5
 Repeat steps 2-4 as necessary. You can check on the commit history of a branch
 using `git log $BRANCH`, or no `$BRANCH` for the current branch.
+
+
+IMPORTANT NOTE:
+If you are working on a PERMANENT feature branch (e.g. pokemon), you need to 
+switch all references to "master" above to your feature branch name "pokemon".
+For all intents and purposes, "pokemon" is now your master branch.
