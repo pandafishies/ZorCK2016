@@ -16,16 +16,14 @@ public class Test8 extends Area{
 
        public Test8(World containingWorld){
             super(containingWorld);
-            setPortal(3, new Portal(false, "Test7"));
-            setPortal(1, new Portal(false, "Test9"));
-            setPortal(0, new Portal(false, "Test5"));
-            setPortal(2, new Portal(false, "Test10"));
+            setPortal(World.WEST, new Portal(Portal.UNLOCKED, "Test7"));
+            setPortal(World.EAST, new Portal(Portal.UNLOCKED, "Test9"));
+            setPortal(World.NORTH, new Portal(Portal.UNLOCKED, "Test5"));
+            setPortal(World.SOUTH, new Portal(Portal.UNLOCKED, "Test10"));
             setTitle("Test Area 8");
             setInitialDescription("This is the eighth test area, there is path "
                     + "leading east-west and path leading north. There is a cave"
                     + " to the south. There is a magic orb on the ground");
-            setDescription("This is the eighth test area");
-            setState("First",true);
             addItem(new MagicOrb());
        }
        
